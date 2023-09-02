@@ -6,7 +6,7 @@
  * @FilePath: \designMode\exercise\2.strategy.cpp
  * @Description: <get salary>
  * 
- * Copyright (c) 2023 by Ã«ÀûµÄÒ°Íû, All Rights Reserved. 
+ * Copyright (c) 2023 by æ¯›åˆ©çš„é‡Žæœ›, All Rights Reserved. 
  */
 // ctrl+win+i
 #include <iostream>
@@ -69,13 +69,13 @@ int main()
 {
     SalaryManager mySalary;
     mySalary.workCompany(new Kingsoft());
-    std::cout << "½ñÌì·¢¹¤×Ê£º" << mySalary.salaryDay() << std::endl;
+    std::cout << "ä»Šå¤©å‘å·¥èµ„ï¼š" << mySalary.salaryDay() << std::endl;
 
     mySalary.workCompany(new Ali());
-    std::cout << "½ñÌì·¢¹¤×Ê£º" << mySalary.salaryDay() << std::endl;
+    std::cout << "ä»Šå¤©å‘å·¥èµ„ï¼š" << mySalary.salaryDay() << std::endl;
 
     mySalary.workCompany(new Tencent());
-    std::cout << "½ñÌì·¢¹¤×Ê£º" << mySalary.salaryDay() << std::endl;
+    std::cout << "ä»Šå¤©å‘å·¥èµ„ï¼š" << mySalary.salaryDay() << std::endl;
 
     system("pause");
     return 0;

@@ -2,15 +2,15 @@
  * @Author: gl401387338@gmail.com gl5644838
  * @Date: 2023-08-26 11:21:39
  * @LastEditors: gl401387338@gmail.com gl5644838
- * @LastEditTime: 2023-08-26 12:35:43
+ * @LastEditTime: 2023-09-02 08:52:29
  * @FilePath: \designMode\exercise\4.Decorator.cpp
- * @Description: Ϊ�˷��㣬û�з��ļ���
- * װ����ģʽ����������io������������
- * ��ǰ���󣺱����������кܶ�io�������ļ�io������io���ڴ�io�ȵ�
- * ���ǵĻ���������������д����λ�����ǳ��˻��������⣬��������չ
- * �����ڶ�д��λǰ�����ݽ��м��ܣ������ݱ��滺��������������ͬʱ
- * ���еȵȡ���ʱ��Щio������չ�������Ϳ�����װ������ʵ�֡�
- * Copyright (c) 2023 by ë����Ұ��, All Rights Reserved. 
+ * @Description: 为了方便，没有分文件！
+ * 装饰器模式，就用最经典的io例子来解释了
+ * 当前需求：比如我现在有很多io操作，文件io，网络io，内存io等等
+ * 他们的基本操作包括读，写，定位。但是除了基本操作外，还会有扩展
+ * 诸如在读写定位前对数据进行加密，对数据保存缓冲区，或者两个同时
+ * 进行等等。这时这些io流的扩展操作，就可以用装饰器来实现。
+ * Copyright (c) 2023 by 毛利的野望, All Rights Reserved. 
  */
 #include <iostream>
 
@@ -75,7 +75,7 @@ public:
     }
 };
 
-// decorator����չ����ʵ��
+// decorator，扩展功能实现
 class Decorator : public Stream
 {
 public:

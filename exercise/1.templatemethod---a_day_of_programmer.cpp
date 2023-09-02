@@ -4,26 +4,26 @@
  * @LastEditors: gl401387338@gmail.com gl5644838
  * @LastEditTime: 2023-07-30 11:55:13
  * @FilePath: \designMode\exercise\1.templatemethod---a_day_of_programmer.cpp
- * @Description: ��һ�����ģʽ���밸����Ϊ�˴�����ڹ����������ҽ������ʵ��дһ���ˣ��ش�������������������
- * ���ݸ��ʼ�һ��ʵ��һ�����˵�һ�죬����һ�����󣬾������£�
- *   ģ�巽��ģʽ������ṹ�ȶ��������Ӳ���仯����������ʵ�����󡣣�����==���˵�һ��==��
- * һ���е�����ṹ������˵�����ȶ�������������-���Է�-��ȥ��˾-����һ����-�����緹-��
- * ��һ����-��������-����һ����-����ҹ��-���ؼ�-��˯����==����==һ��Ľṹ�ǹ̶��ģ�����
- * ��������ҹ�ȷ����Ӳ����Ǳ仯�ģ������ҽ������ϳ԰��ӣ��������ȵȡ��������Ҫ�������
- * ���󣬽�����������ʵ�ִ���Ļ������Բ���Template Methodģʽ��==����==�����ȶ���һ��
- * �������ࡷ��������һ����һ������ĺ������ڸú����У������һ���ȶ����Ӳ��裬�硶�𴲡�
- * ������͡����ϰࡷ�ȵȣ���ʱ������Ҫ�仯���Ӳ��躯�����Զ���Ϊ�麯�����ٶ���һ�����ࡶ
- * ����Ĵ��ˡ���д��Щ��Ҫ�仯���麯�����Ӷ�ʵ��ÿ��Բ�ͬ��������ģʽ����
+ * @Description: 第一个设计模式代码案例。为了代码便于管理，所以我将定义和实现写一块了，特此声明！，还是懒。。
+ * 内容跟笔记一样实现一个打工人的一天，这样一个抽象，具体如下：
+ *   模板方法模式：整体结构稳定。但是子步骤变化，或者晚期实现需求。（例如==打工人的一天==：
+ * 一天中的整体结构，或者说流程稳定，比如早上起床-》吃饭-》去公司-》卷一上午-》吃午饭-》
+ * 卷一下午-》吃晚饭-》卷一晚上-》吃夜宵-》回家-》睡觉。==其中==一天的结构是固定的，但是
+ * 吃早中晚夜等饭的子步骤是变化的，比如我今天早上吃包子，中午吃面等等。所以如果要针对这种
+ * 需求，将其抽象出来，实现代码的话，可以采用Template Method模式，==具体==：首先定义一个
+ * 《打工人类》，其中有一个《一天生活》的函数，在该函数中，会调用一套稳定的子步骤，如《起床》
+ * 《吃早餐》《上班》等等，这时其中需要变化的子步骤函数可以定义为虚函数，再定义一个子类《
+ * 今天的打工人》重写这些需要变化的虚函数，从而实现每天吃不同饭的这种模式。）
  * 
- * Copyright (c) 2023 by ë����Ұ��, All Rights Reserved. 
+ * Copyright (c) 2023 by 毛利的野望, All Rights Reserved. 
  */
 #include <iostream>
 #include <memory>
 class Programmer
 {
 public:
-    Programmer() { std::cout << "���˵�һ�쿪ʼ����-��" << std::endl; } 
-    virtual ~Programmer() { std::cout << "���˵�һ���������" << std::endl; }
+    Programmer() { std::cout << "打工人的一天开始啦！-》" << std::endl; } 
+    virtual ~Programmer() { std::cout << "打工人的一天结束啦！" << std::endl; }
 
     void runToday()
     {
@@ -36,11 +36,11 @@ public:
         backHouse();
         sleep();
     }
-    void wakeUp() { std::cout << "��-��" << std::endl; }
-    void doMorningWork() { std::cout << "���ϴ�ing-��" << std::endl; }
-    void doAfternoonWork() { std::cout << "�����ing-��" << std::endl; }
-    void backHouse() { std::cout << "�ؼ���-��" << std::endl; }
-    void sleep() { std::cout << "˯��ing-��" << std::endl; }
+    void wakeUp() { std::cout << "起床-》" << std::endl; }
+    void doMorningWork() { std::cout << "早上打工ing-》" << std::endl; }
+    void doAfternoonWork() { std::cout << "下午打工ing-》" << std::endl; }
+    void backHouse() { std::cout << "回家啦-》" << std::endl; }
+    void sleep() { std::cout << "睡觉ing-》" << std::endl; }
     
 protected:
     virtual void eatBreakfast() {}
@@ -51,13 +51,13 @@ protected:
 class TodayProgrammer : public Programmer
 {
 public:
-    TodayProgrammer() { std::cout << "������xxx�ţ�-��" << std::endl; }
-    ~TodayProgrammer(){ std::cout << "������xxx�ţ�-��" << std::endl; }
+    TodayProgrammer() { std::cout << "今天是xxx号！-》" << std::endl; }
+    ~TodayProgrammer(){ std::cout << "今天是xxx号！-》" << std::endl; }
 
 protected:
-    void eatBreakfast() override { std::cout << "�԰���-��" << std::endl; }
-    void eatLunch() override { std::cout << "��ţ����-��" << std::endl; }
-    void eatDinner() override { std::cout << "������-��" << std::endl; }
+    void eatBreakfast() override { std::cout << "吃包子-》" << std::endl; }
+    void eatLunch() override { std::cout << "吃牛肉面-》" << std::endl; }
+    void eatDinner() override { std::cout << "吃羊腿-》" << std::endl; }
 };
 
 int main()

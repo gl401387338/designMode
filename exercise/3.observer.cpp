@@ -4,11 +4,11 @@
  * @LastEditors: gl401387338@gmail.com gl5644838
  * @LastEditTime: 2023-08-19 16:46:40
  * @FilePath: \designMode\exercise\3.observer.cpp
- * @Description: ¹Û²ìÕßÄ£Ê½Á·Ï°£º½ø¶ÈÌõÏÔÊ¾Æ÷£¨½ø¶ÈÌõ¹Û²ìÕß£©
- * Ã»ÓĞÊµÏÖµÄ¾ßÌå´úÂë£¬Ö»ÓĞÒ»¸ö¿ò¼Ü¡£
- * Copyright (c) 2023 by Ã«ÀûµÄÒ°Íû, All Rights Reserved. 
+ * @Description: è§‚å¯Ÿè€…æ¨¡å¼ç»ƒä¹ ï¼šè¿›åº¦æ¡æ˜¾ç¤ºå™¨ï¼ˆè¿›åº¦æ¡è§‚å¯Ÿè€…ï¼‰
+ * æ²¡æœ‰å®ç°çš„å…·ä½“ä»£ç ï¼Œåªæœ‰ä¸€ä¸ªæ¡†æ¶ã€‚
+ * Copyright (c) 2023 by æ¯›åˆ©çš„é‡æœ›, All Rights Reserved. 
  */
-// ¹Û²ìÕß
+// è§‚å¯Ÿè€…
 class Progress
 {
 public:
@@ -37,9 +37,9 @@ public:
     void doProgress(float progress) override;
 };
 
-// class xxxProgress....(×Ô¼ºÀ©Õ¹¹Û²ìÕßÀà)
+// class xxxProgress....(è‡ªå·±æ‰©å±•è§‚å¯Ÿè€…ç±»)
 
-//Ä¿±ê£¨µ÷ÓÃ¹Û²ìÕßµÄÖ÷Ìå£©
+//ç›®æ ‡ï¼ˆè°ƒç”¨è§‚å¯Ÿè€…çš„ä¸»ä½“ï¼‰
 class Subject
 {
     virtual ~Subject();

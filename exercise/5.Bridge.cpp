@@ -2,19 +2,19 @@
  * @Author: gl401387338@gmail.com gl5644838
  * @Date: 2023-08-27 11:06:31
  * @LastEditors: gl401387338@gmail.com gl5644838
- * @LastEditTime: 2023-08-27 11:47:00
+ * @LastEditTime: 2023-09-02 08:52:15
  * @FilePath: \designMode\exercise\5.Bridge.cpp
- * @Description: ÎªÁË·½±ã£¬Ã»ÓĞ·ÖÎÄ¼ş£¡
- * Ê×ÏÈ¼ÙÉèÒ»¸ö·ûºÏÇÅÄ£Ê½µÄ£¨2¸ö»òÒÔÉÏÎ¬¶ÈµÄ±ä»¯£©ĞèÇó£º2¸öÎ¬¶È°É£¡
- * Éè¼ÆÒ»¸öÈí¼ş£¬Ê×ÏÈËü°üº¬ºÜ¶à½Ó¿Ú£¬ÈçÆô¶¯£¬µÇÂ¼£¬·¢ËÍĞÅÏ¢£»ÒÔ¼°
- * ÏÔÊ¾¿Ø¼ş£¬²¥·ÅÒôÀÖµÈµÈ¡£¶ø¶Ô²»²»Í¬Æ½Ì¨£¬ÏÔÊ¾¿Ø¼şºÍ²¥·ÅÒôÀÖµÄ·½Ê½
- * ÊÇ²»Ò»ÑùµÄ£¨ÈçpcºÍ°²×¿ÏÔÊ¾ºÍ²¥·Å´úÂë²»Í¬£©£¬¶ÔÓÚ²»Í¬Èí¼ş°æ±¾£¬
- * Æô¶¯µÇÂ¼·¢ËÍĞÅÏ¢Ò²ÊÇ²»Ò»ÑùµÄ£¨ÈçÆÕÍ¨°æÉ¶Ò²Ã»ÓĞ£¬»áÔ±°æ»áÏÔÊ¾²»Í¬
- * Í¼°¸£¬²¥·Å²»Í¬ÒôĞ§µÈµÈ£©¡£Á½¸öÎ¬¶ÈµÄ±ä»¯¡£
+ * @Description: ä¸ºäº†æ–¹ä¾¿ï¼Œæ²¡æœ‰åˆ†æ–‡ä»¶ï¼
+ * é¦–å…ˆå‡è®¾ä¸€ä¸ªç¬¦åˆæ¡¥æ¨¡å¼çš„ï¼ˆ2ä¸ªæˆ–ä»¥ä¸Šç»´åº¦çš„å˜åŒ–ï¼‰éœ€æ±‚ï¼š2ä¸ªç»´åº¦å§ï¼
+ * è®¾è®¡ä¸€ä¸ªè½¯ä»¶ï¼Œé¦–å…ˆå®ƒåŒ…å«å¾ˆå¤šæ¥å£ï¼Œå¦‚å¯åŠ¨ï¼Œç™»å½•ï¼Œå‘é€ä¿¡æ¯ï¼›ä»¥åŠ
+ * æ˜¾ç¤ºæ§ä»¶ï¼Œæ’­æ”¾éŸ³ä¹ç­‰ç­‰ã€‚è€Œå¯¹ä¸ä¸åŒå¹³å°ï¼Œæ˜¾ç¤ºæ§ä»¶å’Œæ’­æ”¾éŸ³ä¹çš„æ–¹å¼
+ * æ˜¯ä¸ä¸€æ ·çš„ï¼ˆå¦‚pcå’Œå®‰å“æ˜¾ç¤ºå’Œæ’­æ”¾ä»£ç ä¸åŒï¼‰ï¼Œå¯¹äºä¸åŒè½¯ä»¶ç‰ˆæœ¬ï¼Œ
+ * å¯åŠ¨ç™»å½•å‘é€ä¿¡æ¯ä¹Ÿæ˜¯ä¸ä¸€æ ·çš„ï¼ˆå¦‚æ™®é€šç‰ˆå•¥ä¹Ÿæ²¡æœ‰ï¼Œä¼šå‘˜ç‰ˆä¼šæ˜¾ç¤ºä¸åŒ
+ * å›¾æ¡ˆï¼Œæ’­æ”¾ä¸åŒéŸ³æ•ˆç­‰ç­‰ï¼‰ã€‚ä¸¤ä¸ªç»´åº¦çš„å˜åŒ–ã€‚
  * 
- * Copyright (c) 2023 by Ã«ÀûµÄÒ°Íû, All Rights Reserved. 
+ * Copyright (c) 2023 by æ¯›åˆ©çš„é‡æœ›, All Rights Reserved. 
  */
-// Îö¹¹µÄĞéº¯Êı£¬²»ÄÜ = 0£¬±ØĞëÓĞº¯ÊıÌå£¡£¡£¡
+// ææ„çš„è™šå‡½æ•°ï¼Œä¸èƒ½ = 0ï¼Œå¿…é¡»æœ‰å‡½æ•°ä½“ï¼ï¼ï¼
 
 
 #include <iostream>
@@ -27,7 +27,7 @@ public:
     PlatformFeature* m_platformFeature;
 public:
     Software(PlatformFeature* platformFeature) : m_platformFeature(platformFeature) {}
-    virtual ~Software() {} // Îö¹¹µÄĞéº¯Êı£¬²»ÄÜ = 0£¬±ØĞëÓĞº¯ÊıÌå£¡£¡£¡
+    virtual ~Software() {} // ææ„çš„è™šå‡½æ•°ï¼Œä¸èƒ½ = 0ï¼Œå¿…é¡»æœ‰å‡½æ•°ä½“ï¼ï¼ï¼
 
     virtual void run() = 0;
     virtual void login() = 0;
@@ -41,17 +41,17 @@ public:
     virtual void playRadio() = 0;
 };
 
-//¸÷ÖÖÆ½Ì¨¹¦ÄÜÊµÏÖ
+//å„ç§å¹³å°åŠŸèƒ½å®ç°
 class PCPlatformFeature : public PlatformFeature
 {
 public:
     void showPicture() override
     {
-        std::cout << "pc¶Ë¿ªÊ¼ÏÔÊ¾Í¼Æ¬" << std::endl;
+        std::cout << "pcç«¯å¼€å§‹æ˜¾ç¤ºå›¾ç‰‡" << std::endl;
     }
     void playRadio() override
     {
-        std::cout << "pc¶Ë¿ªÊ¼²¥·ÅÒôĞ§" << std::endl;
+        std::cout << "pcç«¯å¼€å§‹æ’­æ”¾éŸ³æ•ˆ" << std::endl;
     }
 };
 
@@ -60,11 +60,11 @@ class AndroidPlatformFeature : public PlatformFeature
 public:
     void showPicture() override
     {
-        std::cout << "android¶Ë¿ªÊ¼ÏÔÊ¾Í¼Æ¬" << std::endl;
+        std::cout << "androidç«¯å¼€å§‹æ˜¾ç¤ºå›¾ç‰‡" << std::endl;
     }
     void playRadio() override
     {
-        std::cout << "android¶Ë¿ªÊ¼²¥·ÅÒôĞ§" << std::endl;
+        std::cout << "androidç«¯å¼€å§‹æ’­æ”¾éŸ³æ•ˆ" << std::endl;
     }
 };
 
@@ -73,15 +73,15 @@ class IOSPlatformFeature : public PlatformFeature
 public:
     void showPicture() override
     {
-        std::cout << "ios¶Ë¿ªÊ¼ÏÔÊ¾Í¼Æ¬" << std::endl;
+        std::cout << "iosç«¯å¼€å§‹æ˜¾ç¤ºå›¾ç‰‡" << std::endl;
     }
     void playRadio() override
     {
-        std::cout << "ios¶Ë¿ªÊ¼²¥·ÅÒôĞ§" << std::endl;
+        std::cout << "iosç«¯å¼€å§‹æ’­æ”¾éŸ³æ•ˆ" << std::endl;
     }
 };
 
-//¸÷ÖÖ°æ±¾¹¦ÄÜÊµÏÖ
+//å„ç§ç‰ˆæœ¬åŠŸèƒ½å®ç°
 class NormalVersionSoftware : public Software
 {
 public:
@@ -90,15 +90,15 @@ public:
 
     void run() override
     {
-        std::cout << "Èí¼şÆô¶¯£¡" << std::endl;
+        std::cout << "è½¯ä»¶å¯åŠ¨ï¼" << std::endl;
     }
     void login() override
     {
-        std::cout << "Èí¼şµÇÂ¼£¡" << std::endl;
+        std::cout << "è½¯ä»¶ç™»å½•ï¼" << std::endl;
     }
     void sendMessage() override
     {
-        std::cout << "ÄãÒÑÉÏÏß£¡" << std::endl;
+        std::cout << "ä½ å·²ä¸Šçº¿ï¼" << std::endl;
     }
 };
 
@@ -111,17 +111,17 @@ public:
     void run() override
     {
         m_platformFeature->showPicture();
-        std::cout << "Èí¼şÆô¶¯£¡" << std::endl;
+        std::cout << "è½¯ä»¶å¯åŠ¨ï¼" << std::endl;
     }
     void login() override
     {
         m_platformFeature->showPicture();
-        std::cout << "Èí¼şµÇÂ¼£¡" << std::endl;
+        std::cout << "è½¯ä»¶ç™»å½•ï¼" << std::endl;
     }
     void sendMessage() override
     {
         m_platformFeature->showPicture();
-        std::cout << "ÄúÒÑÉÏÏß£¡" << std::endl;
+        std::cout << "æ‚¨å·²ä¸Šçº¿ï¼" << std::endl;
     }
 };
 
@@ -135,19 +135,19 @@ public:
     {
         m_platformFeature->showPicture();
         m_platformFeature->playRadio();
-        std::cout << "Èí¼şÆô¶¯£¡" << std::endl;
+        std::cout << "è½¯ä»¶å¯åŠ¨ï¼" << std::endl;
     }
     void login() override
     {
         m_platformFeature->showPicture();
         m_platformFeature->playRadio();
-        std::cout << "Èí¼şµÇÂ¼£¡" << std::endl;
+        std::cout << "è½¯ä»¶ç™»å½•ï¼" << std::endl;
     }
     void sendMessage() override
     {
         m_platformFeature->showPicture();
         m_platformFeature->playRadio();
-        std::cout << "ÄúÒÑÉÏÏßÀ²£¬×ğ¾´µÄ³¬¼¶vipÓÃ»§£¡" << std::endl;
+        std::cout << "æ‚¨å·²ä¸Šçº¿å•¦ï¼Œå°Šæ•¬çš„è¶…çº§vipç”¨æˆ·ï¼" << std::endl;
     }
 };
 
